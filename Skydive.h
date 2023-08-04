@@ -6,26 +6,12 @@
 enum class JumpType {
 	undefinedJump,
 	Belly,
-	Tracking,
-	Freefly,
-	Angle,
-	HighPull,
-	HopAndPop,
-	Crew,
-	Flocking,
-	AFFTeacher,
-	AFFStudent,
-	Coaching,
-	CoachStudent,
-	Tandem,
-	Wingsuit,
-	InflatibleTracking,
-	Competition
+	Freefly
 };
 
 class Skydive {
 
-public:
+protected:
 	JumpType jumpType;
 	std::string jumpTypeString;
 	std::string jumperName;
@@ -46,7 +32,7 @@ public:
 		const std::string& jumpNote = "",
 		const std::string& licenseLetter = "", 
 		int jumperId = 0, 
-		int cleared = 1,
+		bool cleared = true,
 		int altitude = 0, 
 		int numInGroup = 0, 
 		const std::vector<int>& jumpersInGroup = std::vector<int>())
@@ -62,7 +48,3 @@ public:
 
 
 };
-
-
-
-

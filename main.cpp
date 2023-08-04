@@ -4,33 +4,35 @@
 #include "core.h"
 
 
-enum MainLoop{
+enum class MainLoop{
 undefined,
 running,
-exit,
+exitApp,
 error};
 
+//int keepGoing = 1;
 
 int main()
 {
-	core core;
+	core myCore;
 	MenuDisplay menu;
-	MainLoop status = running;
+	MainLoop status = MainLoop::running;
 	Plane plane;
 
 	//Startup function
-	core.initialization();
+	myCore.initialization();
 
 	//Initial Menu
 	menu.startMenu();
 
 	//Primary program loop
-	while (status != exit)
+	while (status != MainLoop::exitApp)
 	{
 		//Update takeoff timer
-		core.takeOffTimer(menu.getTimerValue());
+		myCore.takeOffTimer(menu.getTimerValue());
 
-		menu.updateMenu(); //TODO:Create object within implementation
+		
+		menu.updateMenu(menu.menuOption); //TODO:Create object within implementation
 
 		//Get user input for menu selection
 		switch (menu.getMenuOptionUser()) {
@@ -60,6 +62,7 @@ int main()
 			case MenuOptions::exit:
 				break;
 			case MenuOptions::showManifest:
+				menu.startMenu();
 				break;
 			default:
 				break;
@@ -67,12 +70,12 @@ int main()
 
 		//After menu selection functions
 		plane.checkFull();
-		core.setTakeOffTimer();
-		core.saveDailyLog();
+		myCore.setTakeOffTimer();
+		myCore.saveDailyLog();
 	}
 
 	//Terminate Program
-	core.exitApp();
+	myCore.exitApp();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

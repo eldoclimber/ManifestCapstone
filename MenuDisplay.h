@@ -1,5 +1,6 @@
 #pragma once
 
+
 enum class MenuOptions {
 	undefined,
 	newLog,
@@ -19,6 +20,8 @@ enum class MenuOptions {
 class MenuDisplay
 {
 public:
+	MenuOptions menuOption = MenuOptions::undefined;
+
     int startMenu();
     int mainMenu();
     int createPlaneMenu();
@@ -28,15 +31,16 @@ public:
     int editDaily();
     int editJumper();
     int editPlane();
-    int tandemMenu();
 	MenuOptions getMenuOptionUser();
-	int updateMenu();
+	void updateMenu(MenuOptions menuOption);
 	void setTimerValue(int value);
 	int getTimerValue();
+	void clearScreen();
 
-	MenuOptions menuOption = MenuOptions::undefined;
+
 
 private:
+	int option;
 	int timerValue = 0;
 
 };

@@ -39,12 +39,6 @@
     <ClCompile Include="FreeFly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tracking.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Tandem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,12 +63,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FreeFly.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tracking.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tandem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="core.h">

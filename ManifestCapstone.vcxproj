@@ -136,8 +136,6 @@
     <ClCompile Include="MenuDisplay.cpp" />
     <ClCompile Include="Otter.cpp" />
     <ClCompile Include="Plane.cpp" />
-    <ClCompile Include="Tandem.cpp" />
-    <ClCompile Include="Tracking.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Belly.h" />
@@ -148,8 +146,6 @@
     <ClInclude Include="MenuDisplay.h" />
     <ClInclude Include="Otter.h" />
     <ClInclude Include="Plane.h" />
-    <ClInclude Include="Tandem.h" />
-    <ClInclude Include="Tracking.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
