@@ -1,0 +1,28 @@
+n King Air
+s 13
+a 12500
+p Victoria
+t NDC7A78
+d KLMO
+c 12
+n King Air
+s 13
+a 12500
+p Austin
+t NA8MHDV
+d KLMO
+c 12
+n Otter
+s 23
+a 12500
+p Eli
+t NB7L83P
+d KLMO
+c 20
+n Cessna
+s 4
+a 10000
+p Frank
+t NVHX9Q2
+d KLMO
+c 30

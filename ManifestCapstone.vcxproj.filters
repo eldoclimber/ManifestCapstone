@@ -30,12 +30,6 @@
     <ClCompile Include="Belly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Otter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KingAir.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FreeFly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,12 +48,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Belly.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Otter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KingAir.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FreeFly.h">

@@ -17,10 +17,10 @@ protected:
 	std::string jumperName;
 	std::string jumpNote;
 	std::string licenseLetter;
-	int jumperId;
 	int cleared;
 	int altitude;
 	int numInGroup;
+	int groupId;
 	std::vector<int> jumpersInGroup;
 
 
@@ -34,7 +34,8 @@ protected:
 		int jumperId = 0, 
 		bool cleared = true,
 		int altitude = 0, 
-		int numInGroup = 0, 
+		int numInGroup = 0,
+		int groupId = 1,
 		const std::vector<int>& jumpersInGroup = std::vector<int>())
 		: jumpType(jumpType), 
 		jumpTypeString(jumpTypeString), 
@@ -43,8 +44,11 @@ protected:
 		licenseLetter(licenseLetter), 
 		jumperId(jumperId), 
 		altitude(altitude), 
-		numInGroup(numInGroup), 
+		numInGroup(numInGroup),
+		groupId(groupId),
 		jumpersInGroup(jumpersInGroup) {}
 
-
+public:
+	int jumperId;
+	int getJumperId();
 };

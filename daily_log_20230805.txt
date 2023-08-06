@@ -1,0 +1,6 @@
+Plane:,King Air,13,12500,Victoria,NDC7A78,KLMO,12,0
+DateTime:,
+Load Number:,0
+159,Belly,1
+152,Free Fly,2
+

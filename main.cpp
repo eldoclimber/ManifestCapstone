@@ -2,6 +2,7 @@
 //
 
 #include "core.h"
+#include "MenuDisplay.h"
 
 
 enum class MainLoop{
@@ -15,12 +16,11 @@ error};
 int main()
 {
 	core myCore;
-	MenuDisplay menu;
-	MainLoop status = MainLoop::running;
-	Plane plane;
-
-	//Startup function
 	myCore.initialization();
+	MenuDisplay menu(myCore);
+	MainLoop status = MainLoop::running;
+	//Plane plane;
+
 
 	//Initial Menu
 	menu.startMenu();
@@ -29,49 +29,13 @@ int main()
 	while (status != MainLoop::exitApp)
 	{
 		//Update takeoff timer
-		myCore.takeOffTimer(menu.getTimerValue());
+		myCore.takeOffTimer(menu.getTimerValue());		
+		menu.updateMenu(menu.getMenuOption());
 
-		
-		menu.updateMenu(menu.menuOption); //TODO:Create object within implementation
-
-		//Get user input for menu selection
-		switch (menu.getMenuOptionUser()) {
-
-			case MenuOptions::undefined:
-				break;
-			case MenuOptions::addJumper:
-				break;
-			case MenuOptions::editJumper:
-				break;
-			case MenuOptions::editPlane:
-				break;
-			case MenuOptions::addPlane:
-				break;
-			case MenuOptions::newDay:
-				break;
-			case MenuOptions::closeDay:
-				break;
-			case MenuOptions::saveDay:
-				break;
-			case MenuOptions::newLog:
-				break;
-			case MenuOptions::editLog:
-				break;
-			case MenuOptions::newTandem:
-				break;
-			case MenuOptions::exit:
-				break;
-			case MenuOptions::showManifest:
-				menu.startMenu();
-				break;
-			default:
-				break;
-		}
 
 		//After menu selection functions
-		plane.checkFull();
-		myCore.setTakeOffTimer();
-		myCore.saveDailyLog();
+		//plane.isFull();
+		//myCore.saveDailyLog();
 	}
 
 	//Terminate Program
